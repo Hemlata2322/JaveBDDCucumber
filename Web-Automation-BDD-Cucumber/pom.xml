@@ -12,10 +12,7 @@
             <configuration>
                 <source>17</source>      <!-- Set your source Java version -->
                 <target>17</target>      <!-- Set your target Java version -->
-                <compilerArgs>
-                    <arg>--release</arg>
-                    <arg>17</arg>  <!-- Ensure compatibility with JDK 17 -->
-                </compilerArgs>
+               
             </configuration>
         </plugin>
     </plugins>
