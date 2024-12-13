@@ -3,6 +3,7 @@ package com.Hemlata.test.stepDefinitions;
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.firefox.FirefoxDriver;
+import org.openqa.selenium.firefox.FirefoxOptions;
 import org.testng.Assert;
 
 import io.cucumber.java.en.*;
@@ -14,8 +15,10 @@ public class LoginSteps {
 	@Given("User navigates to login page")
 	public void User_navigates_to_login_page()
 	{
+		FirefoxOptions options = new FirefoxOptions();
+		options.addArguments("--headless");
 		WebDriverManager.firefoxdriver().setup();
-		driver = new FirefoxDriver();
+		driver = new FirefoxDriver(options);
 		driver.manage().window().maximize();
 		driver.get("https://www.thetestingworld.com/testings/");		
 	}	
