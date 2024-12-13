@@ -3,6 +3,24 @@
   <groupId>Web-Automation-BDD-Cucumber</groupId>
   <artifactId>Web-Automation-BDD-Cucumber</artifactId>
   <version>0.0.1-SNAPSHOT</version>
+  <build>
+    <plugins>
+        <plugin>
+            <groupId>org.apache.maven.plugins</groupId>
+            <artifactId>maven-compiler-plugin</artifactId>
+            <version>3.10.1</version>  <!-- Latest version -->
+            <configuration>
+                <source>17</source>      <!-- Set your source Java version -->
+                <target>17</target>      <!-- Set your target Java version -->
+                <compilerArgs>
+                    <arg>--release</arg>
+                    <arg>17</arg>  <!-- Ensure compatibility with JDK 17 -->
+                </compilerArgs>
+            </configuration>
+        </plugin>
+    </plugins>
+</build>
+
    <dependencies>
   	<dependency>
   		<groupId>org.seleniumhq.selenium</groupId>
@@ -69,6 +87,12 @@
   		<artifactId>cucumber-testng</artifactId>
   		<version>7.15.0</version>
   	</dependency>
-  	
+  	<dependency>
+    <groupId>org.projectlombok</groupId>
+    <artifactId>lombok</artifactId>
+    <version>1.18.24</version> <!-- or latest version -->
+    <scope>provided</scope>
+</dependency>
+
    </dependencies>
 </project>
